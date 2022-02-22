@@ -14,8 +14,8 @@ class CreateSectionsTable extends Migration
     public function up()
     {
         Schema::create('sections', function (Blueprint $table){
-            $table->id();    
-            $table->string ('NameCoordinator');
+            $table->bigIncrements('id');    
+            $table->string('NameCoordinator', 100);
 
         });
         //
@@ -28,6 +28,6 @@ class CreateSectionsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sections');
     }
 }

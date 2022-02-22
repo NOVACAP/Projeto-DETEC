@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProcessTable extends Migration
+class CreateInterestedsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateProcessTable extends Migration
      */
     public function up()
     {
-        Schema::create('process', function (Blueprint $table) {
+        Schema::create('interesteds', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('interestedName');
             $table->timestamps();
-            $table->bigInteger('NumberProcessSEI');
-            $table->unsignedBigInteger('idSectionProcess');
-
-           // $table->foreign('idSectionProcess')->references('id')->on('sectionsProcess')->onDelete('cascade');
-
-
         });
     }
 
@@ -32,6 +27,6 @@ class CreateProcessTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('process');
+        Schema::dropIfExists('interesteds');
     }
 }

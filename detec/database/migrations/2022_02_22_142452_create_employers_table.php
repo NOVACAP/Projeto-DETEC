@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateEmployersTable extends Migration
+
 {
     /**
      * Run the migrations.
@@ -21,7 +22,7 @@ class CreateEmployersTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('idDemandsEmployers');
 
-            //$table->foreign('idDemandsEmployers')->references('id')->on('demandsEmployers')->onDelete('cascade');
+            //
 
 
         });

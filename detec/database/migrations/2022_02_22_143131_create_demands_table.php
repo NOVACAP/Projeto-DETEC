@@ -34,7 +34,7 @@ class CreateDemandsTable extends Migration
             $table->foreign('idProcess')->references('id')->on('process')->onDelete('cascade');
             $table->foreign('idAdministrativeRegions')->references('id')->on('administrativeRegions')->onDelete('cascade');
             $table->foreign('idActivitys')->references('id')->on('activitys')->onDelete('cascade');
-            //$table->foreign('idDemandsEmployers')->references('id')->on('demandsEmployers')->onDelete('cascade');
+            
             $table->foreign('idInteresteds')->references('id')->on('interesteds')->onDelete('cascade');
             $table->foreign('idTechniqueAreas')->references('id')->on('techniqueAreas')->onDelete('cascade');
         });

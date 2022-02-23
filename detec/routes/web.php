@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/ver-demandas', [DemandController::class, 'store']);
+
+Route::get('/ver-demandas', [DemandController::class, 'index']);
+
+
+
+
+
+Route::get('/criar-demanda', function () {
+    return view('create-demand');
+});
+
+
+

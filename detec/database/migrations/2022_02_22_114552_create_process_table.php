@@ -20,6 +20,7 @@ class CreateProcessTable extends Migration
             $table->unsignedBigInteger('idSectionProcess');
 
            //
+           
 
 
         });

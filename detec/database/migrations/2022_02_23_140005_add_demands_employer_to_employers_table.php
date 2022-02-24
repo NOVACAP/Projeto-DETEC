@@ -14,7 +14,7 @@ class AddDemandsEmployerToEmployersTable extends Migration
     public function up()
     {
         Schema::table('employers', function (Blueprint $table) {
-            //
+            $table->foreign('idDemandsEmployers')->references('id')->on('demandsEmployers')->onDelete('cascade');
         });
     }
 

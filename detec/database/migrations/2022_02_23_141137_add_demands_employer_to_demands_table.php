@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSectionsprocessToProcess extends Migration
+class AddDemandsEmployerToDemandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddSectionsprocessToProcess extends Migration
      */
     public function up()
     {
-        Schema::table('process', function (Blueprint $table) {
-            $table->foreign('idSectionProcess')->references('id')->on('sectionsProcess')->onDelete('cascade');   
+        Schema::table('demands', function (Blueprint $table) {
+            $table->foreign('idDemandsEmployers')->references('id')->on('demandsEmployers')->onDelete('cascade');
         });
     }
 
@@ -25,7 +25,7 @@ class AddSectionsprocessToProcess extends Migration
      */
     public function down()
     {
-        Schema::table('process', function (Blueprint $table) {
+        Schema::table('demands', function (Blueprint $table) {
             //
         });
     }

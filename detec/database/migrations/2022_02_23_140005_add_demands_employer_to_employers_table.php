@@ -26,7 +26,7 @@ class AddDemandsEmployerToEmployersTable extends Migration
     public function down()
     {
         Schema::table('employers', function (Blueprint $table) {
-            //
+            
         });
     }
 }

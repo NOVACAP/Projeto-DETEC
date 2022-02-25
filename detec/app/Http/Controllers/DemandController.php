@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Demand; 
 
 class DemandController extends Controller
 {
@@ -14,7 +15,7 @@ class DemandController extends Controller
     public function index()
     {
         $demand = Demand::get();
-        return view('ver-produtos', ['demand' =>  $demand]); 
+        return view('ver-demand', ['demand' =>  $demand]); 
     }
 
     /**
@@ -36,11 +37,11 @@ class DemandController extends Controller
     public function store(Request $request)
     {
         Demand::create([
-            'dateInput' => $request->nome,
-            'dateDist' => $request->valor,
+            'dateInput' => $request-> dateInput,
+            'dateDist' => $request-> dateDist,
         ]);
 
-        return redirect()->route('ver.produtos');
+        return redirect('/');
     }
 
     /**

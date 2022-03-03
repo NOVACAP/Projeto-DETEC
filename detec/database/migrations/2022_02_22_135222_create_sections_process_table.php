@@ -20,8 +20,6 @@ class CreateSectionsProcessTable extends Migration
 
             $table->foreign('idSections')->references('id')->on('sections')->onDelete('cascade');
             $table->foreign('idProcess')->references('id')->on('process')->onDelete('cascade');
-           
-           
         });
 
     }

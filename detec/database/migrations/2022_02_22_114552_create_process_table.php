@@ -19,9 +19,6 @@ class CreateProcessTable extends Migration
             $table->timestamps();
 
            //
-           
-
-
         });
     }
 

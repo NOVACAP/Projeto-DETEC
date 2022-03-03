@@ -25,7 +25,6 @@ class CreateDemandsTable extends Migration
             $table->unsignedBigInteger('idProcess');
             $table->unsignedBigInteger('idAdministrativeRegions');
             $table->unsignedBigInteger('idActivitys');
-            $table->unsignedBigInteger('idDemandsEmployers');
             $table->unsignedBigInteger('idInteresteds');
             $table->unsignedBigInteger('idTechniqueAreas');
             $table->timestamps();

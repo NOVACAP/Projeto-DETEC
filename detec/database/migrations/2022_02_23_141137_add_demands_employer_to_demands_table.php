@@ -14,6 +14,7 @@ class AddDemandsEmployerToDemandsTable extends Migration
     public function up()
     {
         Schema::table('demands', function (Blueprint $table) {
+            $table->unsignedBigInteger('idDemandsEmployers');
             $table->foreign('idDemandsEmployers')->references('id')->on('demandsEmployers')->onDelete('cascade');
         });
     }
@@ -24,8 +25,10 @@ class AddDemandsEmployerToDemandsTable extends Migration
      * @return void
      */
     public function down()
+    
     {
         Schema::table('demands', function (Blueprint $table) {
+            $table->dropForeign('demands_idDemandsEmployers_foreign'); //[table]_[column]_foreign
             $table->dropColumn('idDemandsEmployers');
         });
     }

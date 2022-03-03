@@ -1,3 +1,5 @@
+
+
 <form action="/criar-demanda" method= 'POST'>
     @csrf {{-- gera token de segurnaça a cada envio--}}
     <label>Data de entrada:</label>
@@ -11,7 +13,7 @@
 </form>
 <br>
 
-$table->bigIncrements('id');
+<p>$table->bigIncrements('id');
 $table->date('dateInput');
 $table->date('dateDist');
 $table->date('delivery');
@@ -23,4 +25,4 @@ $table->unsignedBigInteger('idAdministrativeRegions');
 $table->unsignedBigInteger('idActivitys');
 $table->unsignedBigInteger('idDemandsEmployers');
 $table->unsignedBigInteger('idInteresteds');
-$table->unsignedBigInteger('idTechniqueAreas');
+$table->unsignedBigInteger('idTechniqueAreas');</p>

@@ -20,7 +20,7 @@ class CreateEmployersTable extends Migration
             $table->string('nameEmployer');
             $table->string('function');
             $table->timestamps();
-            $table->unsignedBigInteger('idDemandsEmployers');
+            
 
             //
 

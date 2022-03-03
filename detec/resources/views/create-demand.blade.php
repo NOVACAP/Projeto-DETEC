@@ -3,11 +3,11 @@
 <form action="/criar-demanda" method= 'POST'>
     @csrf {{-- gera token de segurnaça a cada envio--}}
     <label>Data de entrada:</label>
-    <input type="date" name="dateInput" > 
+    <input type="text" name="address" > 
     <br><br>
-    <label>Data de distribuição:</label>
+   <!--<label>Data de distribuição:</label>
     <input type="date"  name="dateDist"> 
-    <br><br>
+    <br><br>--> 
    
     <button type="submit">Salvar</button>
 </form>

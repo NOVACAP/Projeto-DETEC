@@ -8,7 +8,6 @@ use App\Http\Controllers\DemandController;
 
 class Demand extends Model
 {
-    protected $fillable = ['dateInput' , 'dateDist'];
-      
+    protected $fillable = ['address'];
     use HasFactory;
 }

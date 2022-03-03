@@ -14,8 +14,8 @@ class DemandController extends Controller
      */
     public function index()
     {
-        $demand = Demand::get();
-        return view('ver-demand', ['demand' =>  $demand]); 
+        $demands = Demand::get();
+        return view('create-demand', ['demands' => $demands]);
     }
 
     /**
@@ -37,8 +37,7 @@ class DemandController extends Controller
     public function store(Request $request)
     {
         Demand::create([
-            'dateInput' => $request-> dateInput,
-            'dateDist' => $request-> dateDist,
+            'address' => $request-> address,
         ]);
 
         return redirect('/');

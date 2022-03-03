@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SectionProcess extends Model
 {
     use HasFactory;
+
+    public function Process(){
+        return $this->hasMany('App\Models\Process');
+    }    
 }

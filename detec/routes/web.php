@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::post('/criar-demanda', [DemandController::class, 'store']);
 
-Route::get('/ver-demandas', [DemandController::class, 'index']);
+Route::get('/criar-demanda', [DemandController::class, 'index']);
 
 

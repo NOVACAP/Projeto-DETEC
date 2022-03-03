@@ -19,16 +19,16 @@ class CreateDemandsTable extends Migration
             $table->date('dateDist');
             $table->date('delivery');
             $table->string('address');
-            $table->timestamps();
 
             $table->unsignedBigInteger('idThematicAreas');
             $table->unsignedBigInteger('idEmployers');
             $table->unsignedBigInteger('idProcess');
             $table->unsignedBigInteger('idAdministrativeRegions');
             $table->unsignedBigInteger('idActivitys');
-           // $table->unsignedBigInteger('idDemandsEmployers');
+            $table->unsignedBigInteger('idDemandsEmployers');
             $table->unsignedBigInteger('idInteresteds');
             $table->unsignedBigInteger('idTechniqueAreas');
+            $table->timestamps();
 
 
             $table->foreign('idThematicAreas')->references('id')->on('thematicAreas')->onDelete('cascade');

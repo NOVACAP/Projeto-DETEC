@@ -1,4 +1,4 @@
-<form action="/ver-demandas" method= 'POST'>
+<form action="/criar-demanda" method= 'POST'>
     @csrf {{-- gera token de segurnaça a cada envio--}}
     <label>Data de entrada:</label>
     <input type="date" name="dateInput" > 

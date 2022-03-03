@@ -14,6 +14,7 @@ class AddSectionsprocessToProcesstable extends Migration
     public function up()
     {
         Schema::table('process', function (Blueprint $table) {
+            $table->unsignedBigInteger('idSectionProcess');
             $table->foreign('idSectionProcess')->references('id')->on('sectionsProcess')->onDelete('cascade');   
         });
     }
@@ -26,7 +27,7 @@ class AddSectionsprocessToProcesstable extends Migration
     public function down()
     {
         Schema::table('process', function (Blueprint $table) {
-            //
+            $table->dropForeign('process_idSectionProcess_foreign'); //[table]_[column]_foreign
         });
     }
 }

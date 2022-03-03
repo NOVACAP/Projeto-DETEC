@@ -15,9 +15,8 @@ class CreateProcessTable extends Migration
     {
         Schema::create('process', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
             $table->bigInteger('NumberProcessSEI');
-            $table->unsignedBigInteger('idSectionProcess');
+            $table->timestamps();
 
            //
            

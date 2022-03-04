@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemandController;
+use App\Http\Controllers\TechniqueAreaController;
+use App\Http\Controllers\ActivityController;
+use App\Models\TechniqueArea;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +19,20 @@ use App\Http\Controllers\DemandController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');
 
 
 Route::post('/criar-demanda', [DemandController::class, 'store']);
 
 Route::get('/criar-demanda', [DemandController::class, 'index']);
+
+Route::get('/criar-area-tecnica', function () {
+    return view('create-techniqueArea');
+});
+
+/**Technique Area */
+
+Route::post('/techniqueAreas', [ActivityController::class, 'store']);
+
 
 

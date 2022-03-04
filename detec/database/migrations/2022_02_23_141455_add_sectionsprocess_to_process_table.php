@@ -15,7 +15,7 @@ class AddSectionsprocessToProcesstable extends Migration
     {
         Schema::table('process', function (Blueprint $table) {
            $table->unsignedBigInteger('idSectionProcess');
-            $table->foreign('idSectionProcess')->references('id')->on('sectionsProcess')->onDelete('cascade');   
+            $table->foreign('idSectionProcess')->references('id')->on('demandsEmployers')->onDelete('cascade');   
         });
     }
 

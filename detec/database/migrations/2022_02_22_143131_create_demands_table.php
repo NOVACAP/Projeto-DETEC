@@ -17,7 +17,7 @@ class CreateDemandsTable extends Migration
             $table->bigIncrements('id');
             $table->date('dateInput');
             $table->date('dateDist');
-            $table->date('delivery');
+            $table->date('delivery')->nullable();
             $table->string('address');
 
             $table->unsignedBigInteger('idThematicAreas');

@@ -14,7 +14,8 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        //
+        $activities = Activity::get();
+        return view('activity' , [ 'activities' => $activities]);
     }
 
     /**
@@ -38,6 +39,7 @@ class ActivityController extends Controller
         Activity::create([
             'activityName' => $request->activityName,
         ]);
+         return redirect() -> route('ver.atividades');
 
     }
 
@@ -60,7 +62,9 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        //
+        $activity = Activity::find($id); //encontro pela id
+        return view('edit-activity' , ['activity' => $activity]);
+
     }
 
     /**
@@ -72,7 +76,12 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $activity = Activity::find($id);
+        $activity -> update([
+            'activityName' => $request-> activityName,
+        ]);
+
+        return redirect() -> route ('ver.atividades');
     }
 
     /**
@@ -83,6 +92,9 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $activity = Activity::find($id);
+        $activity -> delete();
+
+        return redirect() -> route ('ver.atividades');
     }
 }

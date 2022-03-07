@@ -26,13 +26,27 @@ Route::post('/criar-demanda', [DemandController::class, 'store']);
 
 Route::get('/criar-demanda', [DemandController::class, 'index']);
 
-Route::get('/criar-area-tecnica', function () {
-    return view('create-techniqueArea');
+/**criar atividades */
+
+Route::get('/criar-atividade', function () {
+    return view('create-activity');
 });
+
+Route::post('/atividades', [ActivityController::class, 'store']);
+
+Route::get('/ver-atividades', [ActivityController::class, 'index'])->name('ver.atividades');
+
+/**editar atividades */
+
+Route::get('/editar-atividade/{id}', [ActivityController::class, 'edit']);
+Route::post('/editar-atividade/{id}', [ActivityController::class, 'update']);
+
+/**Deletar atividades */
+Route::get('/excluir-atividade/{id}', [ActivityController::class, 'destroy']);
 
 /**Technique Area */
 
-Route::post('/techniqueAreas', [ActivityController::class, 'store']);
+
 
 
 

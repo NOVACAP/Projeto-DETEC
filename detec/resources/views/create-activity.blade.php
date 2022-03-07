@@ -11,7 +11,7 @@
 <body>
 
 
-    <form action="/techniqueAreas" method= 'POST'>
+    <form action="/atividades" method= 'POST'>
         @csrf {{-- gera token de segurnaça a cada envio--}}
         <label>Area técnica:</label>
         <input type="text" name="activityName" > 
